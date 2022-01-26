@@ -1,0 +1,34 @@
+form.form#registration_form(action="/", method="post")
+	input.js-input-location(type="hidden" name="location")
+	.form__col.form__col-left
+		.form__inputs
+			.form__wrap-input
+				p.form__label имя
+				input.form__input.js-input(type="text", name="name" required placeholder="имя")
+			.form__wrap-input
+				p.form__label номер телефона
+				input.form__input.js-input(type="tel", name="phone" required placeholder="+380")
+			.form__wrap-input
+				p.form__label ник в Telegram
+				input.form__input.js-input(type="text", name="nickname" required placeholder="@")
+		p.form__checkbox-label.form__checkbox-label--desc Регистрируясь на сайте вы соглашаетесь с 
+			a(href="https://affhub.net/confidentiality/" target="_blank") Политикой конфиденциальности.
+	.form__col
+		.form__inputs
+			.form__wrap-input
+				p.form__label электронная почта
+				input.form__input.js-input(type="email", name="email" required placeholder="your@mail.com")
+			.form__wrap-input
+				p.form__label сфера деятельности
+				select.form__input(name="scope")
+					option(value="Веб-мастер") Веб-мастер
+					option(value="Представитель пп") Представитель пп
+					option(value="Другой участник партнерского  маркетинга") Другой участник партнерского маркетинга
+			.form__wrap-input
+				p.form__label с вертикалью работаешь
+				input.form__input.js-input(type="text", name="vertical" required placeholder="с вертикалью работаешь")
+		p.form__checkbox-label.form__checkbox-label--mob Регистрируясь на сайте вы соглашаетесь с 
+			a(href="https://affhub.net/confidentiality/" target="_blank") Политикой конфиденциальности.
+		button.form__btn.btn.js-loader(type="submit")
+			span.form__btn-text Отправить
+			<span class="lds-ring"><span></span><span></span><span></span><span></span></span>

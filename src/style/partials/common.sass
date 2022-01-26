@@ -1,0 +1,201 @@
+body
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif
+	font-size: 20px
+	-webkit-text-size-adjust: none
+	background: #1A1A1A
+	color: white
+	position: relative
+
+html, body
+	overflow-x: hidden
+
+// Font icons
+.fico
+	display: inline-block
+	font-size: 3rem
+	&::before
+		display: block
+
+
+
+.container
+	width: 1170px
+	margin: 0 auto
+	position: relative
+	z-index: 1
+	+r(1249)
+		 width: 1000px
+	+r(1023)
+		padding: 0 35px
+		width: 760px
+	+r(767)
+		width: 640px
+		padding: 0 30px
+	+r(639)
+		width: 480px
+		padding: 0 20px
+	+r(479)
+		width: 100%
+		padding: 0 10px
+
+.title
+	font-family: "Acworth", Arial, Helvetica, sans-serif
+	span
+		position: relative
+		padding: 0 5px
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			z-index: -1
+		&::before
+			background: linear-gradient(90deg, rgba(237, 83, 75, 0.5) 0%, rgba(237, 83, 75, 0.25) 100%)
+			filter: blur(35px)
+		&::after
+			background: linear-gradient(90deg, rgba(237, 83, 75, 0.5) 0%, rgba(237, 83, 75, 0.25) 100%)
+	&--middle
+		font-weight: bold
+		font-size: 48px
+		line-height: 45px
+		span
+			&::after
+				height: 45px
+	&--main
+		font-weight: bold
+		font-size: 96px
+		line-height: 92%
+		span
+			&::after
+				height: 88px
+				top: 2px
+	+r(1249)
+		&--main
+			font-size: 92px
+			line-height: 96%
+	+r(1023)
+		&--main
+			font-size: 76px
+			line-height: 100%
+			span
+				&::after
+					height: 76px
+	+r(767)
+		&--main
+			font-size: 72px
+			span
+				&::after
+					height: 72px
+	+r(374)
+		&--main
+			font-size: 60px
+			span
+				&::after
+					height: 60px
+		&--middle
+			font-size: 42px
+.btn
+	background: #FF8000
+	box-shadow: 0 6px 0 rgba(255, 128, 0, 0.5)
+	text-align: center
+	display: block
+	max-width: 100%
+	width: 100%
+	color: #fff
+	height: 60px
+	letter-spacing: 0.05em
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif
+	font-weight: 500
+	font-size: 24px
+	line-height: 29px
+	border: none
+	cursor: pointer
+	text-decoration: none
+	transition: all .3s
+	&--small
+		font-size: 16px
+		line-height: 18px
+		letter-spacing: 0.03em
+		display: flex
+		align-items: center
+		justify-content: center
+	&--link
+		font-size: 21px
+		line-height: 26px
+		letter-spacing: 0.03em
+		display: flex
+		align-items: center
+		justify-content: center
+		span
+			margin-right: 3px
+		img
+			mix-blend-mode: luminosity
+	&:hover
+		background: rgba(255, 128, 0, 0.5)
+		box-shadow: 0 0 0 rgba(255, 128, 0, 0.5)
+
+
+.label
+	background: url('../img/svg/label_bg.svg') no-repeat center
+	background-size: 100%
+	display: flex
+	align-items: center
+	max-width: 270px
+	width: 100%
+	height: 60px
+	padding-left: 16px
+	position: relative
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 266px
+		height: 42px
+		bottom: -6px
+		right: -6px
+		background:url('../img/svg/label_shadow.svg') no-repeat center
+		background-size: 100%
+	&__ico
+		margin-right: 10px
+	&__text
+		font-size: 14px
+		line-height: 18px
+
+
+
+.circle
+	width: 1250px
+	height: 1250px
+	border-radius: 50%
+	background: radial-gradient(50% 50% at 50% 50%, #ED534B 0%, rgba(237, 83, 75, 0) 100%)
+	opacity: 0.3
+	backdrop-filter: blur(10px)
+	position: absolute
+	z-index: 1
+	pointer-events: none
+	&--big
+		width: 1500px
+		height: 1500px
+	&--1
+		left: calc(50% - 620px)
+		top: 480px
+	&--2
+		left: calc(50% - 720px)
+		top: 1180px
+	&--3
+		left: calc(50% - 470px)
+		top: 1780px
+	&--4
+		left: calc(50% - 440px)
+		top: 2780px
+	&--5
+		left: calc(50% - 1060px)
+		top: 3620px
+	+r(1023)
+		&--1
+			top: 0
+		&--2
+			top: 1080px

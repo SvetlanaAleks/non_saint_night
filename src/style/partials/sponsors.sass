@@ -1,0 +1,124 @@
+.sponsors
+	padding-bottom: 83px
+	position: relative
+	&__img
+		position: absolute
+		top: 670px
+		right: calc(50% - 500px)
+		z-index: 1
+		+r(1249)
+			top: 700px
+			right: calc(50% - 500px)
+		+r(1023)
+			top: 300px
+			right: calc(50% - 380px)
+		+r(767)
+			top: -120px
+			right: calc(50% - 310px)
+		+r(639)
+			top: -50px
+			right: calc(50% - 230px)
+			max-width: 170px
+		+r(479)
+			display: none
+	&__title
+		margin-bottom: 47px
+		padding-left: 670px
+		+r(1249)
+			padding-left: 570px
+		+r(1023)
+			padding-left: 270px
+			margin-bottom: 40px
+		+r(767)
+			padding-left: 0
+			margin-bottom: 30px
+		+r(479)
+			padding-left: 15px
+			margin-bottom: 20px
+	&__list
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+
+.sponsor
+	background: linear-gradient(180deg, rgba(26, 26, 26, 0.5) 0%, rgba(26, 26, 26, 0.25) 77.14%)
+	border: 3px solid #ED534B
+	max-width: 500px
+	width: 100%
+	padding: 12px 26px 32px 26px
+	box-shadow: 30px 30px 0 0 rgba(237, 83, 75, 0.3), 20px 20px 0 0 rgba(237, 83, 75, 0.5), 10px 10px 0 0 rgba(237, 83, 75, 0.7)
+	display: flex
+	flex-direction: column
+	&:nth-of-type(-n+2)
+		margin-bottom: 80px
+	&:nth-of-type(1)
+		margin-right: 100px
+	&:nth-of-type(3)
+		margin-left: 270px
+	+r(1249)
+		max-width: 430px
+		padding: 20px
+		&:nth-of-type(1)
+			margin-right: 60px
+		&:nth-of-type(-n+2)
+			margin-bottom: 60px
+	+r(1023)
+		&:nth-of-type(even)
+			margin-left: auto
+		&:nth-of-type(1)
+			margin-right: 0
+		&:nth-of-type(3)
+			margin-left: 0
+	+r(767)
+		max-width: 550px
+		&:nth-of-type(even)
+			margin-left: 0
+	+r(639)
+		max-width: 410px
+	+r(479)
+		max-width: 91%
+		padding: 20px 12px
+	&__top
+		+r(1249)
+			height: 65px
+			margin-bottom: 10px
+		+r(1023)
+			height: 55px
+		+r(479)
+			height: 50px
+			margin-bottom: 7px
+	&__img
+		mix-blend-mode: luminosity
+		+r(1249)
+			height: 100%
+	&__info
+		color: #ED534B
+		font-weight: bold
+		font-size: 30px
+		line-height: 33px
+		margin-bottom: 14px
+		+r(1249)
+			font-size: 28px
+			line-height: 30px
+		+r(1023)
+			font-size: 26px
+			line-height: 28px
+		+r(479)
+			font-size: 18px
+			line-height: 1
+	&__text
+		font-size: 18px
+		line-height: 24px
+		color: rgba(255, 255, 255, 0.5)
+		margin-bottom: 24px
+		+r(1023)
+			font-size: 16px
+			line-height: 22px
+		+r(479)
+			font-size: 14px
+			line-height: 21px
+			margin-bottom: 40px
+	&__btn
+		max-width: 270px
+		margin: 0 auto
+		margin-top: auto

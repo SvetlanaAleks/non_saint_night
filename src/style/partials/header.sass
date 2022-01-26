@@ -1,0 +1,319 @@
+.header
+	padding-top: 80px
+	padding-bottom: 100px
+	background: url('../img/header_top_bg.png') no-repeat calc(50% - -180px) 0px, url('../img/header_bottom_bg.png') no-repeat calc(50% - 310px) 750px
+	+r(1249)
+		padding-top: 60px
+		padding-bottom: 60px
+		background-size: 1200px, 530px
+	+r(1023)
+		padding-top: 50px
+		background-size: 1100px,390px
+		background-position: calc(50% - -210px) 0,calc(50% - 260px) 1046px
+	+r(767)
+		padding-top: 40px
+		padding-bottom: 40px
+		background-size: 930px,340px
+		background-position: calc(50% - -160px) 30px,calc(50% - 210px) 1016px
+	+r(639)
+		padding-top: 30px
+		background-size: 840px,344px
+		background-position: calc(50% - -143px) 67px,calc(50% - 2px) 546px
+	+r(479)
+		padding-top: 23px
+		padding-bottom: 30px
+	&__logo
+		max-width: 250px
+		width: 100%
+		margin-bottom: 92px
+		+r(1249)
+			max-width: 230px
+			margin-bottom: 80px
+		+r(1023)
+			max-width: 200px
+			margin-bottom: 60px
+		+r(767)
+			max-width: 180px
+			margin-bottom: 50px
+		+r(639)
+			max-width: 165px
+			margin-bottom: 40px
+		+r(479)
+			margin-bottom: 34px
+	&__place
+		font-weight: 500
+		font-size: 24px
+		line-height: 29px
+		color: transparentize(white, .15)
+		margin-bottom: 25px
+		+r(1023)
+			font-size: 22px
+			line-height: 1.2
+			margin-bottom: 20px
+		+r(767)
+			font-size: 20px
+		+r(639)
+			font-size: 18px
+			margin-bottom: 15px
+		+r(479)
+			font-size: 14px
+			margin-bottom: 12px
+	&__title
+		margin-bottom: 30px
+		display: inline-block
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -10px
+			right: 78px
+			width: 112px
+			height: 132px
+			background: url('../img/svg/heart.svg') no-repeat center
+			background-size: 100%
+		+r(1023)
+			&::after
+				background-size: 85%
+				bottom: -15px
+				right: 48px
+		+r(767)
+			margin-bottom: 20px
+			&::after
+				background-size: 80%
+				bottom: -17px
+				right: 45px
+		+r(639)
+			margin-bottom: 15px
+		+r(479)
+			margin-bottom: 11px
+		+r(374)
+			&::after
+				background-size: 67%
+				bottom: -25px
+				right: 27px
+	&__desc
+		font-weight: bold
+		font-size: 36px
+		line-height: 42px
+		margin-bottom: 94px
+		max-width: 425px
+		width: 100%
+		+r(1249)
+			margin-bottom: 80px
+			font-size: 34px
+			line-height: 40px
+		+r(1023)
+			margin-bottom: 60px
+			font-size: 30px
+			line-height: 34px
+		+r(767)
+			font-size: 26px
+			line-height: 32px
+			margin-bottom: 50px
+		+r(639)
+			font-size: 24px
+			line-height: 30px
+			margin-bottom: 40px
+			max-width: 385px
+		+r(479)
+			margin-bottom: 90px
+	&__top-bottom
+		max-width: 270px
+		width: 100%
+		+r(639)
+			margin: auto
+	&__btn
+		margin-bottom: 25px
+		+r(639)
+			margin-bottom: 15px
+	&__top
+		+r(1023)
+			margin-bottom: 30px
+		+r(639)
+			margin-bottom: 335px
+		+r(479)
+			margin-bottom: 358px
+	&__center
+		max-width: 600px
+		width: 100%
+		margin-left: auto
+		margin-top: -72px
+		+r(1249)
+			max-width: 610px
+		+r(1023)
+			margin-top: 0
+			max-width: 100%
+	&__info
+		display: flex
+		align-items: flex-start
+		margin-bottom: 54px
+		+r(1023)
+			justify-content: center
+		+r(639)
+			display: block
+			text-align: center
+		+r(479)
+			margin-bottom: 114px
+	&__date-wrap
+		background: url('../img/svg/timer_bg.svg') no-repeat center
+		background-size: 100%
+		width: 300px
+		height: 342px
+		margin-right: 20px
+		+r(639)
+			margin: 0 auto
+			margin-bottom: 10px
+			position: relative
+			left: 20px
+	&__date
+		font-weight: bold
+		font-size: 172px
+		line-height: 128px
+		font-family: "Acworth", Arial, Helvetica, sans-serif
+		text-align: center
+		padding-top: 91px
+		margin-left: -30px
+		span
+			color: rgba(255, 255, 255, 0.75)
+			font-weight: 500
+			font-size: 24px
+			line-height: 63%
+			display: block
+			font-family: 'Montserrat', Arial, Helvetica, sans-serif
+	&__timer-wrap
+		border: 3px solid #ED534B
+		background: linear-gradient(180deg, rgba(26, 26, 26, 0.15) 0%, rgba(26, 26, 26, 0.075) 100%)
+		backdrop-filter: blur(35px)
+		max-width: 270px
+		width: 100%
+		padding: 20px
+		padding-bottom: 36px
+		box-shadow: 10px 10px 0px 0 rgba(237, 83, 75, 0.5)
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: -30px
+			width: 105px
+			height: 105px
+			background: url('../img/attention_timer.png') no-repeat center
+			background-size: 100%
+		+r(639)
+			margin: 0 auto
+	&__timer-title
+		color: rgba(255, 255, 255, 0.75)
+		font-weight: 500
+		font-size: 30px
+		line-height: 30px
+		margin-bottom: 21px
+		+r(639)
+			text-align: left
+	&__title-bottom
+		margin-bottom: 36px
+		+r(1023)
+			margin-bottom: 25px
+		+r(639)
+			margin-bottom: 19px
+	&__center-desc
+		padding-left: 30px
+		width: 90%
+		+r(1023)
+			width: 100%
+			padding-left: 0
+			margin-left: auto
+			max-width: 420px
+			width: 100%
+		+r(767)
+			max-width: 340px
+		+r(639)
+			max-width: 100%
+		+r(479)
+			padding-left: 15px
+	&__text-main
+		font-weight: 500
+		font-size: 24px
+		line-height: 30px
+		margin-bottom: 16px
+		+r(1023)
+			margin-bottom: 10px
+			font-size: 22px
+			line-height: 28px
+		+r(767)
+			font-size: 20px
+			line-height: 26px
+		+r(639)
+			font-size: 18px
+			line-height: 24px
+		+r(479)
+			margin-bottom: 14px
+	&__text
+		font-size: 18px
+		line-height: 30px
+		margin-bottom: 15px
+		+r(1023)
+			font-size: 16px
+			line-height: 28px
+		+r(767)
+			font-size: 15px
+			line-height: 24px
+		+r(479)
+			font-size: 14px
+			line-height: 21px
+			margin-bottom: 6px
+
+.attention
+	display: flex
+	align-items: center
+	&__ico
+		flex-shrink: 0
+		filter: drop-shadow(5px 0px 5px rgba(26, 26, 26, 0.25))
+	&__text
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: transparentize(white, .25)
+
+.timer
+	&__row
+		display: flex
+		align-items: flex-start
+		+nlt
+			margin-bottom: 9px
+	&__block
+		text-align: center
+	&__top
+		display: flex
+		align-items: flex-start
+	&__el
+		background: rgba(255, 255, 255, 0.3)
+		width: 45px
+		height: 70px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-weight: bold
+		font-size: 56px
+		font-family: "Acworth", Arial, Helvetica, sans-serif
+		+nlt
+			margin-right: 5px
+		&.days
+			background: rgba(237, 83, 75, 0.35)
+	&__text
+		color: rgba(255, 255, 255, 0.75)
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+	&__dots
+		margin-top: 20px
+		margin-left: 10px
+		margin-right: 10px
+	&__dot
+		width: 7px
+		height: 7px
+		border-radius: 50%
+		background-color: white
+		+nlt
+			margin-bottom: 7px

@@ -1,0 +1,104 @@
+.about
+	padding-top: 50px
+	padding-bottom: 114px
+	position: relative
+	background: url('../img/about_bg.png') no-repeat calc(50% - -200px) 10px
+	+r(1249)
+		background-position: calc(50% - -260px) 10px
+	+r(1023)
+		padding-bottom: 100px
+		background-position: calc(50% - -260px) 60px
+		background-size: 600px
+	+r(767)
+		padding-top: 30px
+		padding-bottom: 60px
+		background-position: calc(50% - -210px) 60px
+		background-size: 520px
+	+r(639)
+		padding-bottom: 408px
+		background-position: calc(50% - -20px) bottom
+		background-size: 390px
+	&__cross
+		position: absolute
+		left: calc(50% - -370px)
+		top: 50px
+		z-index: 1
+		+r(1249)
+			left: calc(50% - -270px)
+		+r(1023)
+			left: calc(50% - -180px)
+			max-width: 200px
+			width: 100%
+		+r(767)
+			left: calc(50% - -120px)
+		+r(639)
+			left: calc(50% - -36px)
+			top: 600px
+			max-width: 150px
+	&__wrapper
+		padding-left: 100px
+		max-width: 550px
+		width: 100%
+		+r(1249)
+			padding-left: 70px
+			max-width: 520px
+		+r(1023)
+			padding-left: 40px
+			max-width: 420px + 40px
+		+r(767)
+			padding-left: 0
+			max-width: 370px
+		+r(639)
+			max-width: 100%
+		+r(479)
+			padding-left: 15px
+	&__title
+		margin-bottom: 36px
+		+r(1023)
+			margin-bottom: 25px
+		+r(639)
+			margin-bottom: 20px
+	&__text-main
+		font-weight: 500
+		font-size: 24px
+		line-height: 30px
+		margin-bottom: 12px
+		+r(1023)
+			margin-bottom: 10px
+			font-size: 22px
+			line-height: 28px
+		+r(767)
+			font-size: 20px
+			line-height: 26px
+		+r(639)
+			font-size: 18px
+			line-height: 24px
+		+r(479)
+			margin-bottom: 14px
+	&__text
+		font-size: 18px
+		line-height: 30px
+		margin-bottom: 40px
+		+r(1023)
+			font-size: 16px
+			line-height: 28px
+			margin-bottom: 30px
+		+r(767)
+			font-size: 15px
+			line-height: 24px
+		+r(479)
+			font-size: 14px
+			line-height: 21px
+			margin-bottom: 26px
+	&__bottom-wrap
+		max-width: 270px
+		width: 100%
+		+r(639)
+			margin: auto
+	&__btn
+		margin-bottom: 26px
+		+r(639)
+			margin-bottom: 15px
+	&__label
+		.label__text
+			font-size: 18px

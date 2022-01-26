@@ -1,0 +1,251 @@
+.registration
+	padding-top: 78px
+	+r(479)
+		padding-top: 60px
+	&__title
+		margin-bottom: 32px
+		padding-left: 200px
+		+r(1023)
+			padding-left: 100px
+		+r(767)
+			padding-left: 0
+		+r(479)
+			padding-left: 15px
+			margin-bottom: 16px
+	&__form
+		max-width: 1030px
+		width: 100%
+		margin: auto
+		+r(1249)
+			max-width: 970px
+		+r(1023)
+			max-width: 100%
+		+r(639)
+			margin: 0
+			max-width: 98%
+
+.form
+	display: flex
+	padding: 41px 26px 48px
+	background: linear-gradient(90deg, rgba(237, 83, 75, 0.5) 0%, rgba(237, 83, 75, 0.25) 90.29%)
+	border: 3px solid #ED534B
+	box-shadow: 10px 10px 0px 0 rgba(237, 83, 75, 0.5)
+	+r(1249)
+		padding: 30px 20px
+	+r(1023)
+		padding: 20px 15px
+	+r(767)
+		display: block
+	+r(479)
+		padding: 40px 15px
+	&__col
+		max-width: 470px
+		width: 100%
+		&-left
+			margin-right: 30px
+		+r(1249)
+			max-width: 450px
+		+r(1023)
+			max-width: 400px
+			&-left
+				margin-right: 20px
+		+r(767)
+			max-width: 100%
+			&-left
+				margin-right: 0
+				margin-bottom: 15px
+	&__inputs
+		margin-bottom: 40px
+		+r(1023)
+			margin-bottom: 20px
+		+r(479)
+			margin-bottom: 26px
+	&__wrap-input
+		&.error
+			position: relative
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 24px
+				height: 24px
+				border-radius: 50%
+				background: #ED534B url('../img/svg/minus.svg') no-repeat center
+				box-shadow: 0px 4px 18px rgba(237, 83, 75, 0.37)
+				top: 55px
+				right: 15px
+			.form__input
+				border: 1px solid #ED534B
+		+nlt
+			margin-bottom: 24px
+		+r(1023)
+			+nlt
+				margin-bottom: 15px
+		+r(479)
+			+nlt
+				margin-bottom: 26px
+	&__label
+		font-weight: 500
+		font-size: 18px
+		line-height: 21px
+		margin-bottom: 5px
+		color: #fff
+		padding-left: 10px
+		+r(1023)
+			font-size: 16px
+		+r(639)
+			font-size: 16px
+			margin-bottom: 3px
+		+r(479)
+			font-size: 18px
+			line-height: 22px
+	&__input
+		max-width: 100%
+		width: 100%
+		box-sizing: border-box
+		border: none
+		background: rgba(255, 255, 255, 0.3)
+		height: 50px
+		padding: 0 10px
+		font-size: 24px
+		line-height: 29px
+		font-family: 'Montserrat', Arial, Helvetica, sans-serif
+		color: #FFFFFF
+		+placeholder
+			font-size: 24px
+			line-height: 29px
+			color: #FFFFFF
+		+r(1023)
+			font-size: 18px
+			+placeholder
+				font-size: 18px
+	select
+		font-size: 24px
+		line-height: 29px
+		color: #fff
+		+r(1023)
+			font-size: 18px
+		+r(639)
+			font-size: 16px
+	&__checkbox-label
+		font-size: 18px
+		line-height: 21px
+		padding-left: 10px
+		a
+			color: #FF8000
+			font-size: 21px
+			text-decoration: none
+		&:hover
+			a
+				text-decoration: underline
+		&--mob
+			display: none
+		+r(1249)
+			font-size: 18px
+			line-height: 26px
+		+r(1023)
+			font-size: 16px
+			line-height: 1.2
+			a
+				font-size: 18px
+		+r(767)
+			margin-bottom: 20px
+			&--mob
+				display: block
+			&--desc
+				display: none
+		+r(479)
+			padding-left: 0
+			font-size: 14px
+			line-height: 18px
+			margin-bottom: 11px
+			margin-top: 24px
+			a
+				font-size: 16px
+	&__btn
+		max-width: 370px
+		&.progress
+			.form__btn-text
+				display: none
+			.lds-ring
+				display: flex
+		+r(767)
+			max-width: 100%
+
+
+// Стили для чекбокса в формах
+.checkbox
+	display: flex
+	align-items: flex-start
+	position: relative
+	padding-left: 37px
+	font-size: 18px
+	line-height: 22px
+	user-select: none
+	+r(479)
+		font-size: 12px
+	&__input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+		&:checked 
+			~ .checkbox__checkmark
+				.checkbox__ico
+					opacity: 1
+	&__checkmark
+		position: absolute
+		top: 3px
+		left: 0
+		height: 17px
+		width: 17px
+		background-color: white
+		border: 1px solid #000
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all .3s
+	&__label
+		cursor: pointer
+	&__ico
+		opacity: 0
+		width: 10px
+		transition: all .3s
+		color: #000
+
+
+
+.lds-ring
+	display: none
+	position: relative
+	width: 30px
+	height: 30px
+	margin: auto
+
+.lds-ring span
+	box-sizing: border-box
+	display: block
+	position: absolute
+	width: 20px
+	height: 20px
+	margin: 2px
+	border: 2px solid #cfcfcf
+	border-radius: 50%
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+	border-color: #cfcfcf transparent transparent transparent
+
+.lds-ring span:nth-child(1)
+	animation-delay: -0.45s
+
+.lds-ring span:nth-child(2)
+	animation-delay: -0.3s
+
+.lds-ring span:nth-child(3)
+	animation-delay: -0.15s
+
+@keyframes lds-ring
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
