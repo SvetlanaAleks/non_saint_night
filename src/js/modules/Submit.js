@@ -1,7 +1,7 @@
 var Submit = (function () {
   var errorMessages = {
     phone: {
-      regExp: /[0-9+()-\s]{5,}/,
+      regExp: /[0-9+()-\s]/,
       empty: "Номер телефона обязателен",
       notValid: "Некорректный номер телефона",
     },
@@ -11,7 +11,7 @@ var Submit = (function () {
       notValid: "Некорректный логин",
     },
   };
-  var form = $("#registration_form");
+  var form = $(".js-registration-form");
   var inputLocation = $(".js-input-location");
   return {
     submitHandler: function submitHandler() {
@@ -19,30 +19,43 @@ var Submit = (function () {
         e.preventDefault();
         // $(".form_error").remove();
         // $(".form__wrap-input").removeClass("error");
-        var errorFields = Submit.validateForm(form);
+        // var errorFields = Submit.validateForm(form);
 
-        if (errorFields.length) {
-          Submit.showErrorFields(errorFields);
-        } else {
-          inputLocation.val("affhub.net/affhubtourrussia");
-          $(".js-loader").addClass("progress");
-          $.ajax({
-            url: "https://api.apispreadsheets.com/data/20894/",
-            type: "POST",
-            contentType: false,
-            processData: false,
-            data: new FormData(this),
-            success: function success() {
-              $(".js-loader").removeClass("progress");
+        // if (errorFields.length) {
+        // Submit.showErrorFields(errorFields);
+        // } else {
+        //date, time
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var timeH = date.getHours();
+        var timeM = date.getMinutes();
 
-              $("#registration_form").hide();
-              $(".registration__form-ttl").text("Спасибо за регистрацию!");
-            },
-            error: function () {
-              alert("error");
-            },
-          });
-        }
+        form
+          .find($(".js-input-date"))
+          .val(`${day}.${month}.${year} / ${timeH}:${timeM}`);
+
+        inputLocation.val("affhub.club/nonsaintnight.com");
+        $(".js-loader").addClass("progress");
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/s1t6aIcH4JTq7Fxu",
+          type: "POST",
+          contentType: false,
+          processData: false,
+          data: new FormData(this),
+          success: function success() {
+            $(".js-loader").removeClass("progress");
+
+            $(".js-registration-form").hide();
+            $(".js-registration-title").hide();
+            $(".js-success").show();
+          },
+          error: function () {
+            alert("error");
+          },
+        });
+        // }
       });
     },
     showErrorFields: function showErrorFields(errorFields) {

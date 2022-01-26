@@ -162,9 +162,13 @@
     </section>
     <section class="registration">
       <div class="container">
-        <h2 class="registration__title title title--middle"><span>Регистрация</span></h2>
+        <div class="success js-success">
+          <h2 class="success__title title title--middle"> Спасибо за регистрацию!</h2>
+        </div>
+        <h2 class="registration__title title title--middle js-registration-title"><span>Регистрация</span></h2>
         <div class="registration__form">
-          <form class="form" id="registration_form" action="/" method="post">
+          <form class="form js-registration-form" action="/" method="post">
+            <input class="js-input-date" type="hidden" name="date"/>
             <input class="js-input-location" type="hidden" name="location"/>
             <div class="form__col form__col-left">
               <div class="form__inputs">
@@ -246,7 +250,11 @@
       <div class="popup__wrap">
         <div class="popup__close js-close"><i class="fico fico-close"></i></div>
         <div class="popup__content">
-          <form class="form" id="registration_form" action="/" method="post">
+          <div class="success js-success">
+            <h2 class="success__title title title--middle"> Спасибо за регистрацию!</h2>
+          </div>
+          <form class="form js-registration-form" action="/" method="post">
+            <input class="js-input-date" type="hidden" name="date"/>
             <input class="js-input-location" type="hidden" name="location"/>
             <div class="form__col form__col-left">
               <div class="form__inputs">
