@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="fico" horiz-adv-x="1001">
+    <font-face font-family="fico"
+      units-per-em="1001" ascent="1001"
+      descent="0"
+      font-weight="normal"
+      font-style="normal" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="close"
+      unicode="&#xE001;"
+      horiz-adv-x="1001" d="M500.5 579.134111111111L906.0718333333334 984.7059444444444L984.7059444444446 906.0718333333334L579.1341111111111 500.5L984.7059444444446 94.9281666666667L906.0718333333334 16.2940555555555L500.5 421.8658888888889L94.9281666666667 16.2940555555555L16.2940555555556 94.9281666666667L421.865888888889 500.5L16.2940555555556 906.0718333333334L94.9281666666667 984.7059444444444L500.5 579.134111111111z" />
+  </font>
+</defs>
+</svg>
